@@ -1,0 +1,484 @@
+<html lang="zh-CN"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>新媒体运营简历 - 智象未来</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+        }
+        
+        body {
+            background: #f8fafc;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .resume-container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        /* 头部样式 */
+        .header {
+            background: #2c5282;
+            color: white;
+            padding: 30px 40px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        .photo-container {
+            flex: 0 0 100px;
+        }
+        
+        .profile-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .header-content {
+            flex: 1;
+        }
+        
+        .name {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .title {
+            font-size: 20px;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-bottom: 25px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 15px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 15px;
+        }
+        
+        .contact-icon {
+            width: 22px;
+            height: 22px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* 主体内容样式 */
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 35px;
+        }
+        
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eaeaea;
+        }
+        
+        .section-icon {
+            width: 30px;
+            height: 30px;
+            background: #2c5282;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 12px;
+            color: white;
+        }
+        
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #2c5282;
+        }
+        
+        .entry {
+            margin-bottom: 25px;
+        }
+        
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+        
+        .entry-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2c5282;
+        }
+        
+        .entry-subtitle {
+            font-size: 16px;
+            font-weight: 500;
+            color: #4a5568;
+            margin-bottom: 5px;
+        }
+        
+        .entry-date {
+            font-size: 15px;
+            font-weight: 500;
+            color: #718096;
+        }
+        
+        .entry-details {
+            padding-left: 20px;
+        }
+        
+        .entry-details li {
+            margin-bottom: 8px;
+            position: relative;
+        }
+        
+        .entry-details li:before {
+            content: "•";
+            position: absolute;
+            left: -15px;
+            color: #2c5282;
+            font-weight: bold;
+        }
+        
+        .skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 15px;
+        }
+        
+        .skill-category {
+            background: #f8fafc;
+            border-radius: 8px;
+            padding: 15px;
+            border-left: 3px solid #2c5282;
+        }
+        
+        .skill-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #2c5282;
+        }
+        
+        .skill-items {
+            font-size: 15px;
+            line-height: 1.8;
+        }
+        
+        .self-evaluation {
+            background: #f0f7ff;
+            border-radius: 8px;
+            padding: 20px;
+            border-left: 3px solid #2c5282;
+        }
+        
+        .evaluation-item {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .evaluation-item:before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: #2c5282;
+            font-weight: bold;
+        }
+        
+        .highlight {
+            color: #2c5282;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 25px;
+            }
+            
+            .contact-info {
+                justify-content: center;
+            }
+            
+            .content {
+                padding: 25px;
+            }
+            
+            .name {
+                font-size: 28px;
+            }
+            
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="resume-container">
+        <div class="header">
+            <div class="photo-container">
+                <img src="https://p3-flow-imagex-sign.byteimg.com/tos-cn-i-a9rns2rl98/rc/pc/code_assistant/aa82596f5d34488b86957f207a4541d6~tplv-a9rns2rl98-image.image?rcl=2025081411434250FFBF19E450F34DF721&amp;rk3s=8e244e95&amp;rrcfp=e75484ac&amp;x-expires=1755747822&amp;x-signature=1Fr3BTZ%2BnHbnWqdexinG9kqmxtA%3D" alt="一寸照片" class="profile-photo">
+            </div>
+            <div class="header-content">
+                <h1 class="name">钱娣</h1>
+                <div class="title">求职意向：新媒体运营（AIGC方向）</div>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <span>电话：13406818316</span>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <span>邮箱：13406818316@163.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-birthday-cake"></i></div>
+                        <span>生日：1995.02</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content">
+            <!-- 教育经历 -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h2 class="section-title">教育经历</h2>
+                </div>
+                
+                <div class="entry">
+                    <div class="entry-header">
+                        <div class="entry-title">中国科学技术大学</div>
+                        <div class="entry-date">2022.09 - 2025.06</div>
+                    </div>
+                    <div class="entry-subtitle">新闻与传播 | 硕士</div>
+                    <ul class="entry-details">
+                        <li><strong>主修课程：</strong>计算传播学与社交媒体、媒介经营与管理、新媒体研究等（培养新媒体内容策划与传播能力）</li>
+                        <li><strong>研究实践：</strong>运用Python清洗6，000+社交媒体用户评论数据完成情感分析可视化，支撑传播策略优化；基于R语言构建YouTube用户网络图谱进行网络分析，支撑传播/产品策略优化并撰写研究报告</li>
+                    </ul>
+                </div>
+                
+                <!-- 本科教育背景 -->
+                <div class="entry">
+                    <div class="entry-header">
+                        <div class="entry-title">青岛理工大学</div>
+                        <div class="entry-date">2013.09 - 2017.06</div>
+                    </div>
+                    <div class="entry-subtitle">英语 | 本科</div>
+                    <ul class="entry-details">
+                        <li><strong>专业表现：</strong>专业课排名前5%</li>
+                        <li><strong>荣誉奖项：</strong>连续三年荣获国家励志奖学金、省政府励志奖学金；校级优秀毕业生荣誉称号；英语写作比赛二等奖、外语配音比赛小组一等奖、经贸实习交流比赛小组三等奖</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 在校经历 -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-icon"><i class="fas fa-user-graduate"></i></div>
+                    <h2 class="section-title">在校经历</h2>
+                </div>
+                
+                <div class="entry">
+                    <div class="entry-header">
+                        <div class="entry-title">2023年智能与计算传播年会 | 物料设计</div>
+                        <div class="entry-date">2023.08 - 2023.09</div>
+                    </div>
+                    <ul class="entry-details">
+                        <li>独立使用创客贴设计嘉宾参会证件、席位牌等视觉物料（契合会议主题风格），提升物料统一性与辨识度</li>
+                    </ul>
+                </div>
+                
+                <div class="entry">
+                    <div class="entry-header">
+                        <div class="entry-title">"蜗牛说""学术微沙龙"活动 | 活动组织</div>
+                        <div class="entry-date">2023.03 - 2023.05</div>
+                    </div>
+                    <ul class="entry-details">
+                        <li>参与活动全流程传播：主导拟定采访提纲（聚焦学术话题大众化表达），参与撰写1篇活动推文（含嘉宾观点提炼、互动话题设计）；配合使用创客贴制作活动海报，强化视觉传播效果，助力活动参与度提升</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 项目经历 -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-icon"><i class="fas fa-project-diagram"></i></div>
+                    <h2 class="section-title">项目经历</h2>
+                </div>
+                
+                <!-- 新增数字教师项目 -->
+                <div class="entry">
+                    <div class="entry-header">
+                        <div class="entry-title">数字教师项目</div>
+                        <div class="entry-date">2023.08 - 2024.08</div>
+                    </div>
+                    <ul class="entry-details">
+                        <li><strong>视频制作：</strong>参与课程设计（涵盖文化、科技等领域），录制真人教师教学视频，制作AI教师教学视频并进行剪辑</li>
+                    </ul>
+                </div>
+                
+                <!-- 老科学家项目 -->
+                <div class="entry">
+                    <div class="entry-header">
+                        <div class="entry-title">老科学家成长采集项目</div>
+                        <div class="entry-date">2024.02 - 2024.08</div>
+                    </div>
+                    <ul class="entry-details">
+                        <li><strong>档案编撰：</strong>参与老科学家成长采集项目，独立完成关于郭光灿论文、证书、音视频、照片、新闻访谈等多类型材料的分类整理、格式调整及信息汇总，累计整合超400份文件资料，并系统编撰形成郭光灿资料长编（26万字）</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 实习经历 -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-icon"><i class="fas fa-briefcase"></i></div>
+                    <h2 class="section-title">实习经历</h2>
+                </div>
+                
+                <div class="entry">
+                    <div class="entry-header">
+                        <div class="entry-title">中科大国际合作与交流部暨港澳台事务办公室 | 实习生</div>
+                        <div class="entry-date">2024.05 - 2025.05</div>
+                    </div>
+                    <ul class="entry-details">
+                        <li><strong>行政支持：</strong>提供教师因公出访签证全流程服务；维护教职工信息数据库；参与编撰出访手册"新澳"模块；承担会议协调、文档管理等日常行政支持工作</li>
+                    </ul>
+                </div>
+                
+                <div class="entry">
+                    <div class="entry-header">
+                        <div class="entry-title">网易新闻学院 | 优秀学员</div>
+                        <div class="entry-date">2017.05 - 2017.06</div>
+                    </div>
+                    <ul class="entry-details">
+                        <li><strong>运营实践：</strong>系统研修新媒体运营课程（含内容选题、爆款逻辑、用户互动设计），独立完成自媒体账号搭建（定位传统文化类内容），撰写10+篇推文，掌握"选题-创作-发布"全流程，以100%课程完成度获评优秀学员</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 工作经历 -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-icon"><i class="fas fa-building"></i></div>
+                    <h2 class="section-title">工作经历</h2>
+                </div>
+                
+                <!-- 专利翻译工作 -->
+                <div class="entry">
+                    <div class="entry-header">
+                        <div class="entry-title">北京清亦华合肥分所 | 涉外部专利翻译</div>
+                        <div class="entry-date">2021.03 - 2022.08</div>
+                    </div>
+                    <ul class="entry-details">
+                        <li><strong>文档翻译：</strong>从零构建机械/通信领域专利翻译能力，完成20+项专利初译，系统梳理资深译员100+条修订反馈形成针对性优化方案，12个月内实现翻译质量显著提升</li>
+                    </ul>
+                </div>
+                
+                <div class="entry">
+                    <div class="entry-header">
+                        <div class="entry-title">科大讯飞 | AI资源部语音合成组资源工程师</div>
+                        <div class="entry-date">2019.04 - 2020.11</div>
+                    </div>
+                    <ul class="entry-details">
+                        <li><strong>语音标注：</strong>参与AI语音合成项目（高德导航、智能客服场景）数据处理，涉及AI生成内容的基础数据打磨：通过音频预处理（降噪、呼吸音消除）及标准化标注，保障语音合成效果自然度，间接理解AI内容生产的底层逻辑与质量标准</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 相关技能 -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-icon"><i class="fas fa-tools"></i></div>
+                    <h2 class="section-title">相关技能</h2>
+                </div>
+                
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <div class="skill-title">设计与剪辑工具</div>
+                        <div class="skill-items">
+                            • 具备PS基础，熟练使用创客贴完成会议证件、席位物料，活动物料等设计（如2023智能与计算传播年会、ICA中国分会物料）<br>
+                            • 掌握剪映操作，独立完成数字教师项目实验素材剪辑（含真人教师/AI教师课程内容的录制/制作、素材剪辑与简单效果处理）
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="skill-title">新媒体运营实践</div>
+                        <div class="skill-items">
+                            • 系统学习新媒体运营方法论（网易新闻学院培训），参与自媒体账号搭建及推文创作，熟悉内容发布、基础排版逻辑<br>
+                            • 结合SPSS、Python/R语言基础，可辅助分析内容数据（如互动量、传播路径）以优化运营策略
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="skill-title">语言与翻译能力</div>
+                        <div class="skill-items">
+                            CET6、TEM4、CATTI三级笔译，英语可作为工作语言；具备跨学科技术文档翻译能力
+                        </div>
+                    </div>
+                    
+                    <div class="skill-category">
+                        <div class="skill-title">项目管理与协调</div>
+                        <div class="skill-items">
+                            具备活动策划、会务支持经验，能独立完成设计及突发情况应对
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 自我评价 -->
+            <div class="section">
+                <div class="section-header">
+                    <div class="section-icon"><i class="fas fa-star"></i></div>
+                    <h2 class="section-title">自我评价</h2>
+                </div>
+                
+                <div class="self-evaluation">
+                    <div class="evaluation-item">
+                        新闻与传播硕士背景（主修计算传播学、新媒体研究等课程），具备内容策划与传播的理论基础；有AI语音项目接触经验（科大讯飞），了解AI内容生产的基础逻辑；熟练使用创客贴/剪映完成设计与剪辑（匹配物料制作需求），并通过网易新媒体培训掌握内容运营方法论。擅长跨任务协调（如会议筹备+物料设计+推文写作），能快速适应AIGC领域的内容运营节奏
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    </body></html>
