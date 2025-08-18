@@ -1,7 +1,8 @@
-<html lang="zh-CN"><head>
+<html lang="zh-CN">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>新媒体运营简历 - 智象未来</title>
+    <title>企业文化专员简历 - 思特威2026届秋季校园</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -12,7 +13,7 @@
         }
         
         body {
-            background: #f8fafc;
+            background: #f0f2f5;
             color: #333;
             line-height: 1.6;
             padding: 20px;
@@ -22,24 +23,45 @@
             max-width: 900px;
             margin: 0 auto;
             background: white;
-            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-            border-radius: 10px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+            border-radius: 12px;
             overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        
+        .resume-container:hover {
+            transform: translateY(-5px);
         }
         
         /* 头部样式 */
         .header {
-            background: #2c5282;
+            background: #1e40af;
             color: white;
             padding: 30px 40px;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             gap: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            transform: translate(50%, -50%);
         }
         
         .photo-container {
             flex: 0 0 100px;
+            position: relative;
+            z-index: 1;
         }
         
         .profile-photo {
@@ -48,16 +70,37 @@
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .profile-photo:hover {
+            transform: scale(1.05);
         }
         
         .header-content {
             flex: 1;
+            position: relative;
+            z-index: 1;
         }
         
         .name {
             font-size: 36px;
             font-weight: 700;
             margin-bottom: 5px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .name::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 60px;
+            height: 3px;
+            background: #3b82f6;
+            border-radius: 3px;
         }
         
         .title {
@@ -65,6 +108,7 @@
             font-weight: 400;
             opacity: 0.9;
             margin-bottom: 25px;
+            margin-top: 10px;
         }
         
         .contact-info {
@@ -79,6 +123,11 @@
             align-items: center;
             gap: 8px;
             font-size: 15px;
+            transition: transform 0.2s ease;
+        }
+        
+        .contact-item:hover {
+            transform: translateX(3px);
         }
         
         .contact-icon {
@@ -89,6 +138,11 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            transition: background 0.3s ease;
+        }
+        
+        .contact-item:hover .contact-icon {
+            background: rgba(255, 255, 255, 0.25);
         }
         
         /* 主体内容样式 */
@@ -98,6 +152,19 @@
         
         .section {
             margin-bottom: 35px;
+            position: relative;
+            padding-left: 10px;
+        }
+        
+        .section::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 10px;
+            bottom: 0;
+            width: 3px;
+            background: #e2e8f0;
+            border-radius: 3px;
         }
         
         .section-header {
@@ -105,41 +172,55 @@
             align-items: center;
             margin-bottom: 20px;
             padding-bottom: 10px;
-            border-bottom: 2px solid #eaeaea;
+            border-bottom: 2px solid #e2e8f0;
         }
         
         .section-icon {
             width: 30px;
             height: 30px;
-            background: #2c5282;
+            background: #1e40af;
             border-radius: 6px;
             display: flex;
             align-items: center;
             justify-content: center;
             margin-right: 12px;
             color: white;
+            transition: transform 0.3s ease;
+        }
+        
+        .section-header:hover .section-icon {
+            transform: rotate(5deg);
         }
         
         .section-title {
             font-size: 20px;
             font-weight: 600;
-            color: #2c5282;
+            color: #1e40af;
         }
         
         .entry {
             margin-bottom: 25px;
+            padding: 15px;
+            border-radius: 8px;
+            transition: background 0.3s ease;
+        }
+        
+        .entry:hover {
+            background: #f8fafc;
         }
         
         .entry-header {
             display: flex;
             justify-content: space-between;
             margin-bottom: 8px;
+            flex-wrap: wrap;
+            gap: 10px;
         }
         
         .entry-title {
             font-size: 18px;
             font-weight: 600;
-            color: #2c5282;
+            color: #1e40af;
         }
         
         .entry-subtitle {
@@ -147,12 +228,16 @@
             font-weight: 500;
             color: #4a5568;
             margin-bottom: 5px;
+            font-style: italic;
         }
         
         .entry-date {
             font-size: 15px;
             font-weight: 500;
             color: #718096;
+            background: #f1f5f9;
+            padding: 3px 10px;
+            border-radius: 12px;
         }
         
         .entry-details {
@@ -162,13 +247,18 @@
         .entry-details li {
             margin-bottom: 8px;
             position: relative;
+            transition: color 0.2s ease;
+        }
+        
+        .entry-details li:hover {
+            color: #1e40af;
         }
         
         .entry-details li:before {
             content: "•";
             position: absolute;
             left: -15px;
-            color: #2c5282;
+            color: #3b82f6;
             font-weight: bold;
         }
         
@@ -183,13 +273,26 @@
             background: #f8fafc;
             border-radius: 8px;
             padding: 15px;
-            border-left: 3px solid #2c5282;
+            border-left: 3px solid #3b82f6;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .skill-category:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
         }
         
         .skill-title {
             font-weight: 600;
             margin-bottom: 10px;
-            color: #2c5282;
+            color: #1e40af;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .skill-title i {
+            color: #3b82f6;
         }
         
         .skill-items {
@@ -201,7 +304,18 @@
             background: #f0f7ff;
             border-radius: 8px;
             padding: 20px;
-            border-left: 3px solid #2c5282;
+            border-left: 3px solid #3b82f6;
+            position: relative;
+        }
+        
+        .self-evaluation::before {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            font-size: 40px;
+            color: rgba(59, 130, 246, 0.1);
+            font-family: Georgia, serif;
         }
         
         .evaluation-item {
@@ -214,13 +328,24 @@
             content: "▹";
             position: absolute;
             left: 0;
-            color: #2c5282;
+            color: #3b82f6;
             font-weight: bold;
         }
         
         .highlight {
-            color: #2c5282;
+            color: #1e40af;
             font-weight: 600;
+        }
+        
+        /* 为与企业文化相关的内容添加特殊标记 */
+        .culture-tag {
+            display: inline-block;
+            background: #dbeafe;
+            color: #1e40af;
+            font-size: 12px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-left: 5px;
         }
         
         @media (max-width: 768px) {
@@ -229,6 +354,11 @@
                 align-items: center;
                 text-align: center;
                 padding: 25px;
+            }
+            
+            .name::after {
+                left: 50%;
+                transform: translateX(-50%);
             }
             
             .contact-info {
@@ -246,6 +376,11 @@
             .skills-container {
                 grid-template-columns: 1fr;
             }
+            
+            .entry-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
     </style>
 </head>
@@ -257,7 +392,7 @@
             </div>
             <div class="header-content">
                 <h1 class="name">钱娣</h1>
-                <div class="title">求职意向：新媒体运营（AIGC方向）</div>
+                <div class="title">求职意向：企业文化专员</div>
                 <div class="contact-info">
                     <div class="contact-item">
                         <div class="contact-icon"><i class="fas fa-phone"></i></div>
@@ -318,11 +453,11 @@
                 
                 <div class="entry">
                     <div class="entry-header">
-                        <div class="entry-title">2023年智能与计算传播年会 | 物料设计</div>
+                        <div class="entry-title">2023年智能与计算传播年会 | 会务支持</div>
                         <div class="entry-date">2023.08 - 2023.09</div>
                     </div>
                     <ul class="entry-details">
-                        <li>独立使用创客贴设计嘉宾参会证件、席位牌等视觉物料（契合会议主题风格），提升物料统一性与辨识度</li>
+                        <li>系统完成会务全流程支持，通过设计嘉宾证件、席位物料传递会议主题理念，担任分论坛主持时注重互动引导以营造学术交流氛围，协调处理设备故障等突发状况，保障会议有序推进，强化参与者对活动价值的认同 <span class="culture-tag">文化传递</span></li>
                     </ul>
                 </div>
                 
@@ -332,11 +467,21 @@
                         <div class="entry-date">2023.03 - 2023.05</div>
                     </div>
                     <ul class="entry-details">
-                        <li>参与活动全流程传播：主导拟定采访提纲（聚焦学术话题大众化表达），参与撰写1篇活动推文（含嘉宾观点提炼、互动话题设计）；配合使用创客贴制作活动海报，强化视觉传播效果，助力活动参与度提升</li>
+                        <li>参与活动全流程传播：主导团队分工，围绕 "学术分享与思想碰撞" 的核心主题策划活动流程，参与拟定采访提纲及推文撰写以传递学术文化价值；配合使用创客贴制作活动海报，强化视觉传播效果，助力活动参与度提升 <span class="culture-tag">活动策划</span></li>
+                    </ul>
+                </div>
+                
+                <div class="entry">
+                    <div class="entry-header">
+                        <div class="entry-title">校 / 院级志愿活动 | 志愿服务</div>
+                        <div class="entry-date">2022.09-2024.03</div>
+                    </div>
+                    <ul class="entry-details">
+                        <li>参与 "返乡送站""科技活动周" 等 6 项 + 志愿活动，通过耐心服务传递校园人文关怀，在科普宣传中注重通俗化表达以拉近公众与科技的距离，累计完成 40 + 小时服务，体现对集体活动与文化氛围建设的积极参与 <span class="culture-tag">氛围营造</span></li>
                     </ul>
                 </div>
             </div>
-            
+
             <!-- 项目经历 -->
             <div class="section">
                 <div class="section-header">
@@ -351,7 +496,7 @@
                         <div class="entry-date">2023.08 - 2024.08</div>
                     </div>
                     <ul class="entry-details">
-                        <li><strong>视频制作：</strong>参与课程设计（涵盖文化、科技等领域），录制真人教师教学视频，制作AI教师教学视频并进行剪辑</li>
+                        <li><strong>视频制作：</strong>参与课程设计（涵盖文化、科技等领域），录制真人教师教学视频，制作AI教师教学视频并进行剪辑 <span class="culture-tag">内容创作</span></li>
                     </ul>
                 </div>
                 
@@ -362,7 +507,7 @@
                         <div class="entry-date">2024.02 - 2024.08</div>
                     </div>
                     <ul class="entry-details">
-                        <li><strong>档案编撰：</strong>参与老科学家成长采集项目，独立完成关于郭光灿论文、证书、音视频、照片、新闻访谈等多类型材料的分类整理、格式调整及信息汇总，累计整合超400份文件资料，并系统编撰形成郭光灿资料长编（26万字）</li>
+                        <li><strong>档案编撰：</strong>独立整理郭光灿院士的论文、音视频、新闻访谈等 400 + 份资料，系统梳理其科研经历与精神特质，编撰 26 万字资料长编，助力科学家精神的挖掘与传承 <span class="culture-tag">文化传承</span></li>
                     </ul>
                 </div>
             </div>
@@ -380,7 +525,7 @@
                         <div class="entry-date">2024.05 - 2025.05</div>
                     </div>
                     <ul class="entry-details">
-                        <li><strong>行政支持：</strong>提供教师因公出访签证全流程服务；维护教职工信息数据库；参与编撰出访手册"新澳"模块；承担会议协调、文档管理等日常行政支持工作</li>
+                        <li><strong>行政支持：</strong>在签证服务、数据库维护等工作中，注重通过细致沟通传递服务温度，强化教职工对部门文化的认同 <span class="culture-tag">文化认同</span></li>
                     </ul>
                 </div>
                 
@@ -390,7 +535,7 @@
                         <div class="entry-date">2017.05 - 2017.06</div>
                     </div>
                     <ul class="entry-details">
-                        <li><strong>运营实践：</strong>系统研修新媒体运营课程（含内容选题、爆款逻辑、用户互动设计），独立完成自媒体账号搭建（定位传统文化类内容），撰写10+篇推文，掌握"选题-创作-发布"全流程，以100%课程完成度获评优秀学员</li>
+                        <li><strong>运营实践：</strong>系统研修新媒体运营课程（含内容选题、爆款逻辑、用户互动设计），独立完成自媒体账号搭建（定位传统文化类内容），撰写10+篇推文，掌握"选题-创作-发布"全流程，以100%课程完成度获评优秀学员 <span class="culture-tag">内容传播</span></li>
                     </ul>
                 </div>
             </div>
@@ -433,32 +578,30 @@
                 
                 <div class="skills-container">
                     <div class="skill-category">
-                        <div class="skill-title">设计与剪辑工具</div>
+                        <div class="skill-title"><i class="fas fa-calendar-check"></i> 活动策划与组织</div>
                         <div class="skill-items">
-                            • 具备PS基础，熟练使用创客贴完成会议证件、席位物料，活动物料等设计（如2023智能与计算传播年会、ICA中国分会物料）<br>
-                            • 掌握剪映操作，独立完成数字教师项目实验素材剪辑（含真人教师/AI教师课程内容的录制/制作、素材剪辑与简单效果处理）
+                            • 具备文化类活动（学术沙龙、大型会议）的全流程策划与执行经验，擅长通过物料设计、流程优化传递核心价值，能灵活应对突发状况
                         </div>
                     </div>
                     
                     <div class="skill-category">
-                        <div class="skill-title">新媒体运营实践</div>
+                        <div class="skill-title"><i class="fas fa-pen-fancy"></i> 内容创作与传播</div>
                         <div class="skill-items">
-                            • 系统学习新媒体运营方法论（网易新闻学院培训），参与自媒体账号搭建及推文创作，熟悉内容发布、基础排版逻辑<br>
-                            • 结合SPSS、Python/R语言基础，可辅助分析内容数据（如互动量、传播路径）以优化运营策略
+                            • 熟悉新媒体运营基础，参与文化类推文撰写与账号搭建，了解如何通过内容增强群体认同；具备数据分析基础，可辅助评估文化传播效果
                         </div>
                     </div>
                     
                     <div class="skill-category">
-                        <div class="skill-title">语言与翻译能力</div>
+                        <div class="skill-title"><i class="fas fa-comments"></i> 办公与沟通</div>
                         <div class="skill-items">
-                            CET6、TEM4、CATTI三级笔译，英语可作为工作语言；具备跨学科技术文档翻译能力
+                            熟练使用 Word、Excel、PPT 进行文案撰写与数据整理；多次参与跨团队活动，具备良好的跨部门协作与文化理念传递能力
                         </div>
                     </div>
                     
                     <div class="skill-category">
-                        <div class="skill-title">项目管理与协调</div>
+                        <div class="skill-title"><i class="fas fa-language"></i> 语言能力</div>
                         <div class="skill-items">
-                            具备活动策划、会务支持经验，能独立完成设计及突发情况应对
+                            CET6、TEM4、CATTI 三级笔译，英语可作为工作语言，能支撑跨文化背景下的沟通与内容翻译
                         </div>
                     </div>
                 </div>
@@ -473,12 +616,20 @@
                 
                 <div class="self-evaluation">
                     <div class="evaluation-item">
-                        新闻与传播硕士背景（主修计算传播学、新媒体研究等课程），具备内容策划与传播的理论基础；有AI语音项目接触经验（科大讯飞），了解AI内容生产的基础逻辑；熟练使用创客贴/剪映完成设计与剪辑（匹配物料制作需求），并通过网易新媒体培训掌握内容运营方法论。擅长跨任务协调（如会议筹备+物料设计+推文写作），能快速适应AIGC领域的内容运营节奏
+                        • 具备新闻与传播专业背景，能够从活动策划、内容传播中挖掘与传递核心文化价值，能将理论与实践结合于企业文化落地场景
+                    </div>
+                    <div class="evaluation-item">
+                        • 有丰富的文化类活动组织经验（学术沙龙、会议会务），注重通过细节设计营造氛围、增强群体凝聚力，灵活应对执行中的问题
+                    </div>
+                    <div class="evaluation-item">
+                        • 具备内容创作与新媒体运营基础，能通过推文、物料等载体传递企业文化理念，并结合数据反馈优化呈现方式
+                    </div>
+                    <div class="evaluation-item">
+                        • 责任心强，注重团队协作，认同企业文化对组织发展的核心作用，学习能力强，可快速适应企业文化建设的具体需求
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-    </body></html>
+</body>
+</html>
